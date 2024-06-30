@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAFU Fuel Service Redirect</title>
+    <script>
+        function openApp() {
+            // Attempt to open the app with the fuel service deeplink
+            window.location.href = 'cafuapp://cafu.mobile.com/trigger-service?service=fuel';
+
+            // If the app doesn't open within 2 seconds, redirect to the provided universal link
+            setTimeout(function() {
+                window.location.href = 'https://cafuapp.com/XqgfSj4Ozzb';
+            }, 2000); // 2000 milliseconds = 2 seconds
+        }
+    </script>
+</head>
+<body onload="openApp()">
+    <p>Redirecting to CAFU App for fuel service...</p>
+</body>
+</html>
